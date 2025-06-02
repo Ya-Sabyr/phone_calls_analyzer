@@ -6,7 +6,7 @@ import logging
 
 @celery_app.task
 def process_call_task():
-    webhook = "https://businessautomation.bitrix24.kz/rest/4026/cvw8q51bm4sv4qf1"
+    webhook = ""
     recorder = BitrixCallRecorder(webhook)
     call_details = recorder.process_call_records_btx()
     logging.debug(call_details)
